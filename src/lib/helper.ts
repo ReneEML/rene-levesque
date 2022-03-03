@@ -25,3 +25,7 @@ export function openGraph({
     ogTemplateTitle ? `&templateTitle=${ogTemplateTitle}` : ''
   }`;
 }
+
+export const scrollToId = (id: string) => {
+  window.document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+};
