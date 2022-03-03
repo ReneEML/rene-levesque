@@ -9,10 +9,14 @@ export type UnstyledLinkProps = {
   openNewTab?: boolean;
   className?: string;
   nextLinkProps?: Omit<LinkProps, 'href'>;
+  onClick?: React.MouseEventHandler<HTMLAnchorElement>;
 } & React.ComponentPropsWithRef<'a'>;
 
 const UnstyledLink = React.forwardRef<HTMLAnchorElement, UnstyledLinkProps>(
-  ({ children, href, openNewTab, className, nextLinkProps, ...rest }, ref) => {
+  (
+    { children, href, openNewTab, className, nextLinkProps, onClick, ...rest },
+    ref
+  ) => {
     const isNewTab =
       openNewTab !== undefined
         ? openNewTab
@@ -21,7 +25,7 @@ const UnstyledLink = React.forwardRef<HTMLAnchorElement, UnstyledLinkProps>(
     if (!isNewTab) {
       return (
         <Link href={href} {...nextLinkProps}>
-          <a ref={ref} {...rest} className={className}>
+          <a ref={ref} {...rest} className={className} onClick={() => onClick}>
             {children}
           </a>
         </Link>
@@ -36,6 +40,7 @@ const UnstyledLink = React.forwardRef<HTMLAnchorElement, UnstyledLinkProps>(
         href={href}
         {...rest}
         className={clsxm('cursor-newtab', className)}
+        onClick={onClick}
       >
         {children}
       </a>
