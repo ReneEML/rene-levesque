@@ -35,7 +35,7 @@ export default function Technologies() {
         <ul className='grid w-3/4 grid-cols-1 justify-center gap-4 md:grid-cols-3'>
           {technologies.map((item, index) => (
             <li key={`technologies_${index}`}>
-              <div className='mx-auto flex flex-col rounded-lg bg-primary-100 px-4 py-4'>
+              <div className='mx-auto flex flex-col rounded-lg bg-primary-100 px-4 py-4 drop-shadow-md'>
                 <TechnologyIcon icon={item.icon} />
                 <h4>{item.name}</h4>
                 <p>
