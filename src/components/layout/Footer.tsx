@@ -1,4 +1,6 @@
+import Link from 'next/link';
 import * as React from 'react';
+import { AiFillGithub, AiOutlineLinkedin } from 'react-icons/ai';
 import { RiCopyleftLine } from 'react-icons/ri';
 
 export default function Footer() {
@@ -11,26 +13,21 @@ export default function Footer() {
           Rene Levesque
         </a>
       </span>
-      <ul className='mt-3 flex flex-wrap items-center text-sm text-gray-500 dark:text-slate-200 sm:mt-0'>
-        <li>
-          <a href='#' className='mr-4 hover:underline md:mr-6 '>
-            About
-          </a>
-        </li>
-        <li>
-          <a href='#' className='mr-4 hover:underline md:mr-6'>
-            Privacy Policy
-          </a>
-        </li>
-        <li>
-          <a href='#' className='mr-4 hover:underline md:mr-6'>
-            Licensing
-          </a>
-        </li>
+      <ul className='mt-3 flex flex-wrap items-center space-x-2 text-sm text-gray-500 dark:text-slate-200 sm:mt-0'>
         <li>
           <a href='#' className='hover:underline'>
-            Contact
+            rene.m.levesque@gmail.com
           </a>
+        </li>
+        <li>
+          <Link href='https://www.linkedin.com/in/reneml/' passHref>
+            <AiOutlineLinkedin size='1.5rem' className='cursor-pointer' />
+          </Link>
+        </li>
+        <li>
+          <Link href='https://github.com/ReneEML' passHref>
+            <AiFillGithub size='1.5rem' className='cursor-pointer' />
+          </Link>
         </li>
       </ul>
     </footer>

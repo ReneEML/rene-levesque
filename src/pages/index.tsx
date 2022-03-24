@@ -4,7 +4,7 @@ import About from '@/components/about/About';
 import HeroBanner from '@/components/hero/HeroBanner';
 import Layout from '@/components/layout/Layout';
 import Projects from '@/components/projects/Projects';
-import Technologies from '@/components/technologies/technologies';
+import Technologies from '@/components/technologies/Technologies';
 
 /**
  * SVGR Support

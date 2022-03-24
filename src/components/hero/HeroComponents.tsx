@@ -23,7 +23,7 @@ export function HeroText() {
     <div>
       <p>
         I&#39;m currently studying Computer Engineering at uWaterloo.
-        <br />I try to build epic stuff, play board games, and lift weights.
+        <br />I like to build epic stuff, play board games, and lift weights.
       </p>
     </div>
   );
@@ -38,10 +38,12 @@ export function HeroContent({ children }: { children: React.ReactNode }) {
 export function HeroButtons() {
   return (
     <div className='flex flex-col justify-center md:flex-row md:justify-start'>
+      {/* 
+      // TODO: Uncomment once blog is finished
       <div className='mt-4 flex w-full justify-center md:mt-0 md:w-auto md:px-0'>
         <Button className='w-full py-3 md:py-2'>Read my blog</Button>
-      </div>
-      <div className='mt-4 flex w-full justify-center md:mt-0 md:ml-4 md:w-auto'>
+      </div> */}
+      <div className='mt-4 flex w-full justify-center md:mt-0 md:w-auto'>
         <Button
           className='w-full py-3 text-center md:py-2'
           onClick={() => scrollToId('about')}
@@ -56,7 +58,7 @@ export function HeroButtons() {
 export function HeroLinks() {
   return (
     <div className='flex flex-row justify-start space-x-4'>
-      <UnderlineLink href='https://github.com/ReneEML'>
+      <UnderlineLink href='/static/rene_levesque_resume.pdf'>
         <BsNewspaper />
         &#160;Resume
       </UnderlineLink>

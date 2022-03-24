@@ -5,8 +5,6 @@ import { AiOutlineClose, AiOutlineCoffee, AiOutlineMenu } from 'react-icons/ai';
 import UnstyledLink from '@/components/links/UnstyledLink';
 
 const links = [
-  { href: '/', label: 'Home' },
-  { href: '/', label: 'Blog' },
   { href: '#projects', label: 'Projects' },
   { href: '#about', label: 'About' },
 ];
@@ -52,10 +50,10 @@ export default function Header() {
         <div className='layout mt-2 flex h-14 items-center justify-between'>
           <div className='bg-white md:flex'>
             <div className='mr-1 flex cursor-pointer items-center text-2xl font-bold'>
-              <span className='mr-1 pb-1 text-3xl text-purple-700'>
-                <AiOutlineCoffee />
-              </span>
-              <UnstyledLink href='/' className='font-medium'>
+              <UnstyledLink href='/' className='flex flex-row font-medium'>
+                <span className='mr-1 text-3xl text-purple-700'>
+                  <AiOutlineCoffee />
+                </span>
                 RL
               </UnstyledLink>
             </div>

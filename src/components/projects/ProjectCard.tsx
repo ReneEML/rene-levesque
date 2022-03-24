@@ -20,7 +20,7 @@ export default function ProjectCard({
   description: string;
 }) {
   return (
-    <div className='flex h-full w-full flex-col rounded-lg bg-primary-100'>
+    <div className='flex h-full w-full flex-col rounded-lg bg-primary-100 drop-shadow-lg'>
       <Image
         className='rounded-t-lg'
         src={image}
