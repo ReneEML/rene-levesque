@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import * as React from 'react';
 
+import { customLoader } from '@/lib/helper';
+
 import Tags from './Tags';
 import UnderlineLink from '../links/UnderlineLink';
 
@@ -28,6 +30,7 @@ export default function ProjectCard({
         height={200}
         width={200}
         alt='source'
+        loader={customLoader}
       />
       <div className='space-y-2 px-4 pt-4 pb-6'>
         <div className='text-left'>

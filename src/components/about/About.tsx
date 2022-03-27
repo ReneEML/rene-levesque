@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import * as React from 'react';
 
+import { customLoader } from '@/lib/helper';
+
 import { bioParagraphs } from '@/constants/constants';
 
 import Achievemets from '../acheivements/Acheivements';
@@ -25,6 +27,7 @@ function AboutContent() {
             src='/images/rene.jpg'
             alt='Photo of Rene Levesque'
             layout='responsive'
+            loader={customLoader}
             width={200}
             height={200}
           />
