@@ -4,7 +4,7 @@ module.exports = {
     dirs: ['src'],
   },
   images: {
-    domains: ['image.shutterstock.com'],
+    loader: 'custom',
   },
   reactStrictMode: true,
   // SVGR

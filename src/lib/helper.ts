@@ -1,3 +1,5 @@
+import { ImageLoaderProps } from 'next/image';
+
 type OpenGraphType = {
   siteName: string;
   description: string;
@@ -28,4 +30,8 @@ export function openGraph({
 
 export const scrollToId = (id: string) => {
   window.document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+};
+
+export const customLoader = ({ src }: ImageLoaderProps) => {
+  return src;
 };

@@ -1,7 +1,8 @@
-import Link from 'next/link';
 import * as React from 'react';
 import { AiFillGithub, AiOutlineLinkedin } from 'react-icons/ai';
 import { RiCopyleftLine } from 'react-icons/ri';
+
+import UnstyledLink from '../links/UnstyledLink';
 
 export default function Footer() {
   const getYear = () => new Date().getFullYear();
@@ -15,19 +16,22 @@ export default function Footer() {
       </span>
       <ul className='mt-3 flex flex-wrap items-center space-x-2 text-sm text-gray-500 dark:text-slate-200 sm:mt-0'>
         <li>
-          <a href='#' className='hover:underline'>
+          <a
+            href='mailto:rene.m.levesque@gmail.com'
+            className='hover:underline'
+          >
             rene.m.levesque@gmail.com
           </a>
         </li>
         <li>
-          <Link href='https://www.linkedin.com/in/reneml/' passHref>
+          <UnstyledLink href='https://www.linkedin.com/in/reneml/'>
             <AiOutlineLinkedin size='1.5rem' className='cursor-pointer' />
-          </Link>
+          </UnstyledLink>
         </li>
         <li>
-          <Link href='https://github.com/ReneEML' passHref>
+          <UnstyledLink href='https://github.com/ReneEML'>
             <AiFillGithub size='1.5rem' className='cursor-pointer' />
-          </Link>
+          </UnstyledLink>
         </li>
       </ul>
     </footer>
