@@ -25,6 +25,7 @@
   --color-primary-800: rgb(var(--tw-color-primary-800)); /* #6b21a8 */
   --color-primary-900: rgb(var(--tw-color-primary-900)); /* #581c87 */
   /* #endregion  /**======== Primary Color =========== */
+  --dark-background-primary: rgb(18 18 18);
 }
 
 @layer base {

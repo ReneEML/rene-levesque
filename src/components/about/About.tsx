@@ -27,6 +27,7 @@ function AboutContent() {
             src='/images/rene.jpg'
             alt='Photo of Rene Levesque'
             layout='responsive'
+            unoptimized
             loader={customLoader}
             width={200}
             height={200}

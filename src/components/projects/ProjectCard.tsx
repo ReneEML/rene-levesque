@@ -24,6 +24,7 @@ export default function ProjectCard({
   return (
     <div className='flex h-full w-full flex-col rounded-lg bg-primary-100 drop-shadow-lg'>
       <Image
+        unoptimized
         className='rounded-t-lg'
         src={image}
         layout='intrinsic'
