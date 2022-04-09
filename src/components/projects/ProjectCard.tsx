@@ -22,7 +22,7 @@ export default function ProjectCard({
   description: string;
 }) {
   return (
-    <div className='flex h-full w-full flex-col rounded-lg bg-primary-100 drop-shadow-lg'>
+    <div className='flex flex-col rounded-lg bg-primary-100 drop-shadow-lg'>
       <Image
         unoptimized
         className='rounded-t-lg'
@@ -33,7 +33,7 @@ export default function ProjectCard({
         alt='source'
         loader={customLoader}
       />
-      <div className='space-y-2 px-4 pt-4 pb-6'>
+      <div className='space-y-2 px-4 py-4'>
         <div className='text-left'>
           <h3 className='font-medium'>{title}</h3>
         </div>
