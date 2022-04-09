@@ -9,5 +9,5 @@ Project build off [template](https://github.com/theodorusclarence/ts-nextjs-tail
 
 - aws s3 rm s3://`bucket-name` --recursive
 - cd out
-- aws s3 sync . s3:`bucket-name`
+- aws s3 sync . s3://`bucket-name`
 - aws cloudfront create-invalidation --distribution-id `distribution-id` --paths "/\*";
