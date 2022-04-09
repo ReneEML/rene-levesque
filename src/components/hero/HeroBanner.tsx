@@ -14,7 +14,7 @@ import Container from '../util/Container';
 export default function HeroBanner() {
   return (
     <Container>
-      <div className='h-screen 2xl:pt-16'>
+      <div className='h-screen dark:bg-dark dark:text-slate-300 2xl:pt-16'>
         <div className='grid grid-cols-1 md:grid-cols-2'>
           <div className='order-last flex flex-col items-center justify-center md:order-first'>
             <HeroContent>

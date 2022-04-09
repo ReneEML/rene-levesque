@@ -22,7 +22,7 @@ export default function ProjectCard({
   description: string;
 }) {
   return (
-    <div className='flex flex-col rounded-lg bg-primary-100 drop-shadow-lg'>
+    <div className='flex flex-col rounded-lg bg-primary-100 drop-shadow-lg dark:bg-primary-900'>
       <Image
         unoptimized
         className='rounded-t-lg'
