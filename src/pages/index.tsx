@@ -5,7 +5,7 @@ import HeroBanner from '@/components/hero/HeroBanner';
 import Layout from '@/components/layout/Layout';
 import Projects from '@/components/projects/Projects';
 import Seo from '@/components/Seo';
-import Technologies from '@/components/technologies/Technologies';
+import Technologies from '@/components/technologies/technologies';
 
 /**s
  * SVGR Support
