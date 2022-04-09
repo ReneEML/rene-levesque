@@ -8,7 +8,7 @@ export const projects = [
     description: 'Party game to play with friends in person or over discord',
   },
   {
-    image: '/images/portfolio-site.png',
+    image: '/images/renelevesque-site.png',
     title: 'Portfolio Website',
     tags: ['Next.js', 'TailwindCSS', 'S3', 'Cloudfront', 'Route53'],
     codeLink: 'https://github.com/ReneEML/rene-levesque',
