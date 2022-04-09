@@ -1,8 +1,13 @@
 import Link from 'next/link';
 import * as React from 'react';
 import { AiOutlineClose, AiOutlineCoffee, AiOutlineMenu } from 'react-icons/ai';
+import { BsMoonStars, BsSun } from 'react-icons/bs';
+
+import { useDarkMode } from '@/hooks/useDarkMode';
 
 import UnstyledLink from '@/components/links/UnstyledLink';
+
+import Button from '../buttons/Button';
 
 const links = [
   { href: '#projects', label: 'Projects' },
@@ -11,6 +16,7 @@ const links = [
 
 export default function Header() {
   const [mobileNavOpen, setMobileNavOpen] = React.useState(false);
+  const [colorTheme, setTheme] = useDarkMode();
   const openMobileNav = () => {
     setMobileNavOpen(true);
   };
@@ -18,9 +24,20 @@ export default function Header() {
     setMobileNavOpen(false);
   };
 
+  const ToggleDarkModeButton = () => (
+    <Button onClick={() => setTheme(colorTheme)}>
+      <BsSun className='hidden dark:flex' />
+      <BsMoonStars className='flex dark:hidden' />
+    </Button>
+  );
+
+  const toggleDarkModeAndCloseNav = () => {
+    setTheme(colorTheme);
+    closeMobileNav();
+  };
   const MobileDropdown = () => {
     return (
-      <div className='flex h-screen w-screen flex-col py-8 md:hidden'>
+      <div className='flex h-screen w-screen flex-col py-8 dark:bg-dark dark:text-slate-300 md:hidden'>
         <div className='flex flex-row justify-end py-8'>
           <button
             className='px-12 hover:text-purple-700'
@@ -29,7 +46,7 @@ export default function Header() {
             <AiOutlineClose size='2rem' />
           </button>
         </div>
-        <ul className='mx-auto flex flex-col items-start space-y-16 py-16'>
+        <ul className='mx-auto flex flex-col items-center space-y-16 py-16'>
           {links.map(({ href, label }) => (
             <li key={`${href}${label}`}>
               <Link href={href}>
@@ -39,6 +56,12 @@ export default function Header() {
               </Link>
             </li>
           ))}
+          <li>
+            <button onClick={() => toggleDarkModeAndCloseNav()}>
+              <BsSun size='2rem' className='hidden dark:flex' />
+              <BsMoonStars size='2rem' className='flex dark:hidden' />
+            </button>
+          </li>
         </ul>
       </div>
     );
@@ -46,12 +69,12 @@ export default function Header() {
 
   const ResponsiveHeader = () => {
     return (
-      <div className='flex flex-col'>
+      <div className='flex flex-col dark:bg-dark dark:text-slate-300'>
         <div className='layout mt-2 flex h-14 items-center justify-between'>
-          <div className='bg-white md:flex'>
+          <div className='md:flex'>
             <div className='mr-1 flex cursor-pointer items-center text-2xl font-bold'>
-              <UnstyledLink href='/' className='flex flex-row font-medium'>
-                <span className='mr-1 text-3xl text-purple-700'>
+              <UnstyledLink href='/' className='flex flex-row font-medium '>
+                <span className='mr-1 text-3xl text-purple-700 '>
                   <AiOutlineCoffee />
                 </span>
                 RL
@@ -65,7 +88,7 @@ export default function Header() {
                 size='2rem'
               />
             </button>
-            <ul className='hidden justify-between space-x-4 md:flex'>
+            <ul className='hidden justify-between space-x-4 dark:text-slate-300 md:flex'>
               {links.map(({ href, label }) => (
                 <li key={`${href}${label}`}>
                   <UnstyledLink href={href} className='hover:text-purple-700'>
@@ -75,6 +98,9 @@ export default function Header() {
               ))}
             </ul>
           </nav>
+          <div className='hidden md:flex'>
+            <ToggleDarkModeButton />
+          </div>
         </div>
       </div>
     );

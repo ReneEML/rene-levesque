@@ -12,7 +12,7 @@ import Hr from '../util/Hr';
 function AboutContent() {
   return (
     <div className='flex flex-row items-center justify-center py-6 drop-shadow-md'>
-      <div className='grid w-full grid-cols-1 items-center rounded-xl bg-primary-100 md:w-5/6 md:grid-cols-2'>
+      <div className='grid w-full grid-cols-1 items-center rounded-xl bg-primary-100 dark:bg-primary-900 md:w-5/6 md:grid-cols-2'>
         <div className='order-last px-6 py-4 md:order-first'>
           <h3>Bio</h3>
           {bioParagraphs.map((item, index) => (

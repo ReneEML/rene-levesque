@@ -12,7 +12,7 @@ function Achievement({
   plus: boolean;
 }) {
   return (
-    <div className='rounded-lg bg-primary-100 px-4 py-4'>
+    <div className='rounded-lg bg-primary-100 px-4 py-4 dark:bg-primary-900'>
       <h3>
         {count}
         {plus ? '+' : ''}

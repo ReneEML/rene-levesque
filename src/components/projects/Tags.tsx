@@ -2,7 +2,7 @@ import * as React from 'react';
 
 function Tag({ title }: { title: string }) {
   return (
-    <div className='mt-1 flex-auto rounded-full bg-primary-900 py-1 px-2'>
+    <div className='mt-1 flex-auto rounded-full bg-primary-900 py-1 px-2 dark:bg-dark '>
       <p className='text-center text-xs text-slate-200 md:text-sm'>{title}</p>
     </div>
   );
