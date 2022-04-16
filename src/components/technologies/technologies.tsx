@@ -6,6 +6,14 @@ import { technologies } from '@/constants/constants';
 import Container from '../util/Container';
 import Hr from '../util/Hr';
 
+interface TechnologyCardProps {
+  item: {
+    icon: string;
+    content: string;
+    name: string;
+  };
+}
+
 function TechnologyIcon({ icon }: { icon: string }) {
   switch (icon) {
     case 'react':
@@ -20,6 +28,19 @@ function TechnologyIcon({ icon }: { icon: string }) {
   return <></>;
 }
 
+function TechnologyCard({ item }: TechnologyCardProps) {
+  return (
+    <div className='mx-auto flex w-full flex-col rounded-lg bg-primary-100 px-4 py-4 drop-shadow-md dark:bg-primary-900'>
+      <TechnologyIcon icon={item.icon} />
+      <h4>{item.name}</h4>
+      <p>
+        Experience With: <br />
+        {item.content}
+      </p>
+    </div>
+  );
+}
+
 export default function Technologies() {
   return (
     <Container>
@@ -32,20 +53,11 @@ export default function Technologies() {
         </p>
       </div>
       <div className='flex justify-center'>
-        <ul className='grid w-3/4 grid-cols-1 justify-center gap-4 md:grid-cols-3'>
+        <div className='grid w-3/4 grid-cols-1 justify-center gap-4 md:grid-cols-3'>
           {technologies.map((item, index) => (
-            <li key={`technologies_${index}`}>
-              <div className='mx-auto flex flex-col rounded-lg bg-primary-100 px-4 py-4 drop-shadow-md dark:bg-primary-900'>
-                <TechnologyIcon icon={item.icon} />
-                <h4>{item.name}</h4>
-                <p>
-                  Experience With: <br />
-                  {item.content}
-                </p>
-              </div>
-            </li>
+            <TechnologyCard key={`technology_card_${index}`} item={item} />
           ))}
-        </ul>
+        </div>
       </div>
     </Container>
   );
