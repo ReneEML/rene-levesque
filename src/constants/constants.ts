@@ -23,7 +23,7 @@ export const projects = [
     codeLink: 'https://github.com/ReneEML/algo-visualizer',
     demoLink: 'https://algo-visualizer.renelevesque.com/',
     description:
-      'Visualizations of sorting algorithms. Planned: Graph + pathfinding visualizations.',
+      'Visualizations of sorting algorithms. Planned: graph + pathfinding visualizations.',
   },
 ];
 
