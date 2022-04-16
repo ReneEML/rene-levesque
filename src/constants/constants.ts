@@ -1,8 +1,8 @@
 export const projects = [
   {
-    image: '/images/paranoia.jpeg',
+    image: '/images/paranoia-game.png',
     title: 'Paranoia Game',
-    tags: ['React.js', 'Spring Boot', 'Web Sockets'],
+    tags: ['React', 'Spring Boot', 'Web Sockets'],
     codeLink: 'https://github.com/ReneEML/Paranoia',
     demoLink: 'https://hungry-jang-560516.netlify.app/',
     description: 'Party game to play with friends in person or over discord',
@@ -15,6 +15,15 @@ export const projects = [
     demoLink: '/',
     description:
       "Website to display my projects, resume and skills I've learned",
+  },
+  {
+    image: '/images/sorting-visualizer.png',
+    title: 'Algorithm Vizualizer',
+    tags: ['React', 'TailwindCSS', 'Typescript', 'S3', 'Cloudfront', 'Route53'],
+    codeLink: 'https://github.com/ReneEML/algo-visualizer',
+    demoLink: 'https://algo-visualizer.renelevesque.com/',
+    description:
+      'Visualizations of sorting algorithms. Planned: Graph + pathfinding visualizations.',
   },
 ];
 
