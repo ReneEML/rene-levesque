@@ -18,7 +18,7 @@ export const projects = [
   },
   {
     image: '/images/sorting-visualizer.png',
-    title: 'Algorithm Vizualizer',
+    title: 'Algorithm Visualizer',
     tags: ['React', 'TailwindCSS', 'Typescript', 'S3', 'Cloudfront', 'Route53'],
     codeLink: 'https://github.com/ReneEML/algo-visualizer',
     demoLink: 'https://algo-visualizer.renelevesque.com/',
