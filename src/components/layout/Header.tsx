@@ -7,6 +7,8 @@ import { useDarkMode } from '@/hooks/useDarkMode';
 
 import UnstyledLink from '@/components/links/UnstyledLink';
 
+import { ISSERVER, KEYS } from '@/constants/constants';
+
 import Button from '../buttons/Button';
 
 const links = [
@@ -23,16 +25,19 @@ export default function Header() {
   const closeMobileNav = () => {
     setMobileNavOpen(false);
   };
-
+  const updateTheme = () => {
+    if (!ISSERVER) window.localStorage.setItem(KEYS.COLOR, colorTheme);
+    setTheme(colorTheme);
+  };
   const ToggleDarkModeButton = () => (
-    <Button onClick={() => setTheme(colorTheme)}>
+    <Button onClick={() => updateTheme()}>
       <BsSun className='hidden dark:flex' />
       <BsMoonStars className='flex dark:hidden' />
     </Button>
   );
 
   const toggleDarkModeAndCloseNav = () => {
-    setTheme(colorTheme);
+    updateTheme();
     closeMobileNav();
   };
   const MobileDropdown = () => {
