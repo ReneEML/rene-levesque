@@ -1,3 +1,9 @@
+export const ISSERVER = typeof window === 'undefined';
+
+export const KEYS = {
+  COLOR: '__rl_color_mode',
+};
+
 export const projects = [
   {
     image: '/images/paranoia-game.png',
