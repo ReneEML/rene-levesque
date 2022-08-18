@@ -10,8 +10,9 @@ import UnstyledLink from '@/components/links/UnstyledLink';
 import Button from '../buttons/Button';
 
 const links = [
-  { href: '#projects', label: 'Projects' },
-  { href: '#about', label: 'About' },
+  { href: '/#projects', label: 'Projects' },
+  { href: '/#about', label: 'About' },
+  { href: '/blog', label: 'Blog' },
 ];
 
 export default function Header() {

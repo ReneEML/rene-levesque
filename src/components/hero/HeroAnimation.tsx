@@ -11,6 +11,7 @@ export default function HeroAnimation() {
   };
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   return (
     <div className='flex w-full justify-center'>
