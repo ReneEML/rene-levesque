@@ -4,6 +4,9 @@ export const KEYS = {
   COLOR: '__rl_color_mode',
 };
 
+export const blog_api_url =
+  'https://60jw92fb3b.execute-api.us-east-1.amazonaws.com/rl-blog-api';
+
 export const projects = [
   {
     image: '/images/paranoia-game.png',

@@ -6,8 +6,11 @@ import remarkGfm from 'remark-gfm';
 import html from 'remark-html';
 
 import BlogPost from '@/components/blog/blogpost';
+import { PostProps } from '@/components/blog/postsStruct';
 import Layout from '@/components/layout/Layout';
 import Loading from '@/components/util/Loading';
+
+import { ISSERVER } from '@/constants/constants';
 
 const processMarkdown = (content: string) => {
   return remark().use(html).use(remarkGfm).use(remarkBreaks).process(content);
@@ -17,10 +20,31 @@ export default function Post() {
   const [content, setContent] = useState('');
   const [isLoading, setIsLoading] = useState(true);
   const router = useRouter();
-
-  const getPost = () => {
+  const [postData, setPostData] = useState<PostProps>({
+    articleUrl: '',
+    id: '',
+    title: '',
+    author: '',
+    timestamp: 0,
+  });
+  const getPostMetadata = (): string => {
     const { post } = router.query;
-    const url = `https://rl-blog-post-files.s3.amazonaws.com/first-post.MD`;
+    if (!ISSERVER) {
+      if (typeof post == 'string') {
+        const data = window.localStorage.getItem(post);
+        console.log(data);
+        console.log(typeof data);
+        if (typeof data == 'string') {
+          const dataObj = JSON.parse(data);
+          setPostData(dataObj);
+          return dataObj.articleUrl;
+        }
+      }
+    }
+    return '';
+  };
+
+  const getPost = (url: string) => {
     fetch(url)
       .then((result) => {
         if (result.status !== 200) throw new Error('Failed to find post');
@@ -38,17 +62,18 @@ export default function Post() {
   useEffect(() => {
     if (!router.isReady) return;
     setIsLoading(true);
-    getPost();
+    const postUrl = getPostMetadata();
+    if (postUrl) getPost(postUrl);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [router.isReady]);
   return (
     <Layout>
       {!isLoading ? (
         <BlogPost
-          title='My first Article'
-          author='Rene Levesque'
+          title={postData.title}
+          author={postData.title}
           content={content}
-          date={new Date().toLocaleDateString('en-us')}
+          date={new Date(postData.timestamp).toLocaleDateString('en-us')}
         />
       ) : (
         <Loading />
