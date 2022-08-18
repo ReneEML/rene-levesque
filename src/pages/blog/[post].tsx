@@ -32,8 +32,6 @@ export default function Post() {
     if (!ISSERVER) {
       if (typeof post == 'string') {
         const data = window.localStorage.getItem(post);
-        console.log(data);
-        console.log(typeof data);
         if (typeof data == 'string') {
           const dataObj = JSON.parse(data);
           setPostData(dataObj);
