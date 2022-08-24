@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import * as React from 'react';
 import { AiFillGithub, AiOutlineLinkedin } from 'react-icons/ai';
 import { BsNewspaper } from 'react-icons/bs';
@@ -37,12 +38,12 @@ export function HeroContent({ children }: { children: React.ReactNode }) {
 
 export function HeroButtons() {
   return (
-    <div className='flex flex-col justify-center md:flex-row md:justify-start'>
-      {/* 
-      // TODO: Uncomment once blog is finished
+    <div className='flex flex-col justify-center space-x-2 md:flex-row md:justify-start'>
       <div className='mt-4 flex w-full justify-center md:mt-0 md:w-auto md:px-0'>
-        <Button className='w-full py-3 md:py-2'>Read my blog</Button>
-      </div> */}
+        <Link href='/blog'>
+          <Button className='w-full py-3 md:py-2'>Read my blog</Button>
+        </Link>
+      </div>
       <div className='mt-4 flex w-full justify-center md:mt-0 md:w-auto'>
         <Button
           className='w-full py-3 text-center md:py-2'
