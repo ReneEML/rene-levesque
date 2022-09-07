@@ -1,3 +1,12 @@
+export const ISSERVER = typeof window === 'undefined';
+
+export const KEYS = {
+  COLOR: '__rl_color_mode',
+};
+
+export const blog_api_url =
+  'https://60jw92fb3b.execute-api.us-east-1.amazonaws.com/rl-blog-api';
+
 export const projects = [
   {
     image: '/images/paranoia-game.png',
@@ -8,13 +17,13 @@ export const projects = [
     description: 'Party game to play with friends in person or over discord',
   },
   {
-    image: '/images/renelevesque-site.png',
-    title: 'Portfolio Website',
-    tags: ['Next.js', 'TailwindCSS', 'S3', 'Cloudfront', 'Route53'],
-    codeLink: 'https://github.com/ReneEML/rene-levesque',
-    demoLink: '/',
-    description:
-      "Website to display my projects, resume and skills I've learned",
+    image: '/images/happyStocksThumb.png',
+    title: 'Happy Stocks',
+    tags: ['React', 'TailwindCSS', 'Go', 'Flask', 'Cohere NLP', 'Twitter API'],
+    codeLink: 'https://github.com/alex-he8276/hack-the-stocks',
+    demoLink:
+      'https://www.youtube.com/watch?v=aLN__1DyNQQ&ab_channel=Ren%C3%A9levesque',
+    description: 'Classify stock sentiment using tweets from Twitter',
   },
   {
     image: '/images/sorting-visualizer.png',
@@ -58,12 +67,12 @@ export const acheivements = [
   },
   {
     description: 'University Average (%)',
-    count: 89,
+    count: 90,
     plus: true,
   },
   {
     description: 'Powerlifting Total (lbs)',
-    count: 1000,
+    count: 1100,
     plus: true,
   },
   {
