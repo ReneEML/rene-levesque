@@ -83,8 +83,7 @@ export const acheivements = [
 ];
 
 export const bioParagraphs = [
-  "My name is Rene Levesque, and yes I do have the same name as the founder of the Bloc Quebecois (a blessing and a curse). I'm currently studying Computer Engineering at the University of Waterloo. My main interests are embedded systems, control systems, and machine learning.",
-  "I've always been into working out. Currently I'm a powerlifter which means I only squat, bench, and deadlift (I'm only kind of joking). I'm a Jiu Jitsu player and enjoy watching MMA. I play soccer intramurals, I've met some of my best friends at Waterloo Park playing soccer.",
-  "Magic the Gathering is my game of choice. My main formats are draft and modern (some historic if I'm playing on Arena). I used to play CSGO and League but I'm quite competitive so these time consuming games lost my interest once I started university and lost all my free time.",
-  "I recently bought an arduino, it's been a lot of fun to hack around with. I plan to make a larger hardware project in the near future.",
+  "My name's Rene Levesque - google me and you'll find my famous name twin (epic Quebec separatist)!  I'm studying computer engineering at the University of Waterloo - my main areas of focus are Signal Processing, Communications and Machine Learning.",
+  "Outside of school I enjoy programming (check out my Github to see what I've been up to), watching anime - currently watching Tokyo Revengers and Vinland Saga, and Powerlifting - I've competed in 2 competitions including Ontario provincials and I'm planning to compete in the 2024 nationals.",
+  "I'm actively looking for internships so reach out on LinkedIn or email if you have an opportunity for me!",
 ];
