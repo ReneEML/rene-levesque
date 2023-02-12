@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import * as React from 'react';
+import { useState } from 'react';
 import { AiOutlineClose, AiOutlineCoffee, AiOutlineMenu } from 'react-icons/ai';
 import { BsMoonStars, BsSun } from 'react-icons/bs';
 
@@ -16,7 +17,8 @@ const links = [
 ];
 
 export default function Header() {
-  const [mobileNavOpen, setMobileNavOpen] = React.useState(false);
+  const [mobileNavOpen, setMobileNavOpen] = useState(false);
+  const [colorMode, setColorMode] = useState('light');
   const openMobileNav = () => {
     setMobileNavOpen(true);
   };
@@ -25,19 +27,23 @@ export default function Header() {
   };
   const toggleDarkMode = () => {
     if (!ISSERVER) {
-      const storedTheme = window.localStorage.getItem(KEYS.COLOR);
       const root = window.document.documentElement;
-      const colorTheme = storedTheme === 'light' ? 'dark' : 'light';
-      if (!storedTheme) {
-        root.classList.remove('light');
-        root.classList.add('dark');
-      } else {
-        window.localStorage.setItem(KEYS.COLOR, colorTheme);
-        root.classList.remove(storedTheme);
-        root.classList.add(colorTheme);
-      }
+      const newMode = colorMode === 'light' ? 'dark' : 'light';
+      root.classList.remove(colorMode);
+      root.classList.add(newMode);
+      setColorMode(newMode);
+      window.localStorage.setItem(KEYS.COLOR, newMode);
     }
   };
+
+  React.useEffect(() => {
+    if (!ISSERVER) {
+      const theme = window.localStorage.getItem(KEYS.COLOR);
+      if (theme) {
+        setColorMode(theme);
+      }
+    }
+  }, []);
   const ToggleDarkModeButton = () => (
     <Button
       onClick={() => {

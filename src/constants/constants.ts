@@ -72,7 +72,7 @@ export const acheivements = [
   },
   {
     description: 'Powerlifting Total (lbs)',
-    count: 1100,
+    count: 1200,
     plus: true,
   },
   {
