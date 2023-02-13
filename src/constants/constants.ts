@@ -9,12 +9,11 @@ export const blog_api_url =
 
 export const projects = [
   {
-    image: '/images/paranoia-game.png',
-    title: 'Paranoia Game',
-    tags: ['React', 'Spring Boot', 'Web Sockets'],
-    codeLink: 'https://github.com/ReneEML/Paranoia',
-    demoLink: 'https://hungry-jang-560516.netlify.app/',
-    description: 'Party game to play with friends in person or over discord',
+    image: '/images/order-book.gif',
+    title: 'Order Book',
+    tags: ['C++', 'CMake', 'GoogleTest'],
+    codeLink: 'https://github.com/ReneEML/order-book',
+    description: 'A data structure that facilitates matching stock buyers with stock sellers',
   },
   {
     image: '/images/happyStocksThumb.png',
@@ -33,6 +32,14 @@ export const projects = [
     demoLink: 'https://algo-visualizer.renelevesque.com/',
     description:
       'Visualizations of sorting algorithms. Planned: graph + pathfinding visualizations.',
+  },
+  {
+    image: '/images/paranoia-game.png',
+    title: 'Paranoia Game',
+    tags: ['React', 'Spring Boot', 'Web Sockets'],
+    codeLink: 'https://github.com/ReneEML/Paranoia',
+    demoLink: 'https://hungry-jang-560516.netlify.app/',
+    description: 'Party game to play with friends in person or over discord',
   },
 ];
 

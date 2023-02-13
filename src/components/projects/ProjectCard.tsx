@@ -18,7 +18,7 @@ export default function ProjectCard({
   title: string;
   tags: string[];
   codeLink: string;
-  demoLink: string;
+  demoLink: string | undefined;
   description: string;
 }) {
   return (
@@ -41,7 +41,11 @@ export default function ProjectCard({
         <Tags tags={tags} />
         <div className='flex flex-row justify-start space-x-4'>
           <UnderlineLink href={codeLink}>Code</UnderlineLink>
-          <UnderlineLink href={demoLink}>Demo</UnderlineLink>
+          {demoLink ? (
+            <UnderlineLink href={demoLink}>Demo</UnderlineLink>
+          ) : (
+            <></>
+          )}
         </div>
       </div>
     </div>
