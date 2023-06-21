@@ -9,11 +9,11 @@ export const blog_api_url =
 
 export const projects = [
   {
-    image: '/images/order-book.gif',
-    title: 'Order Book',
+    image: '/images/random-squares.png',
+    title: 'Ray Tracer',
     tags: ['C++', 'CMake', 'GoogleTest'],
-    codeLink: 'https://github.com/ReneEML/order-book',
-    description: 'A data structure that facilitates matching stock buyers with stock sellers',
+    codeLink: 'https://github.com/ReneEML/ray-tracer',
+    description: 'A simple ray tracer that uses path tracing',
   },
   {
     image: '/images/happyStocksThumb.png',
@@ -46,17 +46,17 @@ export const projects = [
 export const technologies = [
   {
     name: 'Front-End',
-    content: 'React.js, Next.js, and TailwindCss',
+    content: 'React.js, Next.js, ThreeJS, and TailwindCss',
     icon: 'react',
   },
   {
     name: 'Back-End',
-    content: 'Node.js, Spring Boot',
+    content: 'Node.js, Spring Boot, Flask',
     icon: 'database',
   },
   {
     name: 'Cloud Infrastructure',
-    content: 'AWS: API gateway, Lambda, S3, Route53, Cloudfront',
+    content: 'AWS, GCP, Terraform',
     icon: 'cloud',
   },
 ];
@@ -79,7 +79,7 @@ export const acheivements = [
   },
   {
     description: 'Powerlifting Total (lbs)',
-    count: 1200,
+    count: 1250,
     plus: true,
   },
   {
@@ -91,6 +91,6 @@ export const acheivements = [
 
 export const bioParagraphs = [
   "My name's Rene Levesque - google me and you'll find my famous name twin (epic Quebec separatist)!  I'm studying computer engineering at the University of Waterloo - my main areas of focus are Signal Processing, Communications and Machine Learning.",
-  "Outside of school I enjoy programming (check out my Github to see what I've been up to), watching anime - currently watching Tokyo Revengers and Vinland Saga, and Powerlifting - I've competed in 2 competitions including Ontario provincials and I'm planning to compete in the 2024 nationals.",
+  "Outside of school I enjoy programming (check out my Github to see what I've been up to), watching anime - currently watching Tokyo Revengers and Vinland Saga, and Powerlifting - I've competed in 3 competitions including Ontario provincials and I'm planning to compete in the 2024 nationals.",
   "I'm actively looking for internships so reach out on LinkedIn or email if you have an opportunity for me!",
 ];

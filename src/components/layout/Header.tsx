@@ -13,7 +13,6 @@ import Button from '../buttons/Button';
 const links = [
   { href: '/#projects', label: 'Projects' },
   { href: '/#about', label: 'About' },
-  { href: '/blog', label: 'Blog' },
 ];
 
 export default function Header() {

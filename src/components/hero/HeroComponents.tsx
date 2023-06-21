@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import * as React from 'react';
 import { AiFillGithub, AiOutlineLinkedin } from 'react-icons/ai';
 import { BsNewspaper } from 'react-icons/bs';
@@ -24,7 +23,7 @@ export function HeroText() {
     <div>
       <p>
         I&#39;m currently studying Computer Engineering at uWaterloo.
-        <br />I like to build epic stuff, play board games, and lift weights.
+        <br />I like to lift weights, write code and play board games
       </p>
     </div>
   );
@@ -39,11 +38,6 @@ export function HeroContent({ children }: { children: React.ReactNode }) {
 export function HeroButtons() {
   return (
     <div className='flex flex-col justify-center space-x-2 md:flex-row md:justify-start'>
-      <div className='mt-4 flex w-full justify-center md:mt-0 md:w-auto md:px-0'>
-        <Link href='/blog'>
-          <Button className='w-full py-3 md:py-2'>Read my blog</Button>
-        </Link>
-      </div>
       <div className='mt-4 flex w-full justify-center md:mt-0 md:w-auto'>
         <Button
           className='w-full py-3 text-center md:py-2'
